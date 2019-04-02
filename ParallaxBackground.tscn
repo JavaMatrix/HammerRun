@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://art/bg/parallax-mountain-bg.png" type="Texture" id=1]
+[ext_resource path="res://art/bg/parallax-mountain-montain-far.png" type="Texture" id=2]
+[ext_resource path="res://art/bg/parallax-mountain-mountains.png" type="Texture" id=3]
+[ext_resource path="res://art/bg/parallax-mountain-trees.png" type="Texture" id=4]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_offset = Vector2( 0, 400 )
+
+[node name="ParallaxBG" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1088, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBG"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ParallaxFar" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.1, 0 )
+motion_mirroring = Vector2( 1088, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxFar"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ParallaxNearMountains" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 0 )
+motion_mirroring = Vector2( 1088, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxNearMountains"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="ParallaxNearTrees" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.8, 0 )
+motion_mirroring = Vector2( 1088, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxNearTrees"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+centered = false
+
